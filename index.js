@@ -13,7 +13,7 @@ const express = require('express')
 const app = express()
 const PORT = 9270
 
-app.get("/zas_zuhaer__gmail_com", (req, res) => {
+app.get("/zas_zuhaer2_gmail_com", (req, res) => {
 	const x = req.query.x
 	const y = req.query.y
 	if(x == undefined || y == undefined){
