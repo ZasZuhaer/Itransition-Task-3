@@ -1,0 +1,7 @@
+What I learned while doing task 3,
+Express.js: provide routing system to manage HTTP methods
+Node.js: javascript but in your console
+
+we can use postman to test non interfacial websites to test functions
+console.log() is for printing something in the console (well, as the name says)
+return res.send() is how we return a response after a HTTP request is made, the response can be visible in postman when returned
