@@ -13,24 +13,22 @@ const express = require('express')
 const app = express()
 const PORT = 9270
 
+const isNatural = (s) => /^[1-9][0-9]*$/.test(s)
+
 app.get("/zas_zuhaer2_gmail_com", (req, res) => {
-	const x = req.query.x
-	const y = req.query.y
-	if(x === undefined || y === undefined){
-		return res.send("NaN")
-	}
-	var a = Number(x.trim())
-	var b = Number(y.trim())
+  const { x, y } = req.query
 
-	if (!Number.isInteger(a) || !Number.isInteger(b) || a <= 0 || b <= 0){
-		return res.send("NaN");
- 	}
-	else{
-		return res.send(String(lcm(a,b)))
-	}
+  if (!isNatural(x) || !isNatural(y)) {
+    return res.send("NaN")
+  }
 
-});
+  const a = Number(x)
+  const b = Number(y)
+
+  return res.send(String(lcm(a, b)))
+})
+
 
 app.listen(PORT, () => {
   console.log(`Server running`);
-});
+})

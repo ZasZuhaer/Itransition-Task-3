@@ -7,3 +7,5 @@ console.log() is for printing something in the console (well, as the name says)
 return res.send() is how we return a response after a HTTP request is made, the response can be visible in postman when returned
 
 "web methods" this term means http get, post, put, patch, delete methods
+when validating natural number inputs make sure it omits scientific notation numbers (5e2), hexadecimal numbers (0x3) and math expressions
+natural numbers means only natural numbers, nothing else
